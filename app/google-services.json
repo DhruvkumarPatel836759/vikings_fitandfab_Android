@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "21174635961",
+    "project_id": "fitandfab-802c1",
+    "storage_bucket": "fitandfab-802c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21174635961:android:d565040f2ad85a72b43a68",
+        "android_client_info": {
+          "package_name": "com.example.vikings_fitandfab_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21174635961-hv7mdv8ipkhjnm9us4bl0clgbg16ugii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnXmo5PdqjtYsQl956dqqEDgH3viWroDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21174635961-hv7mdv8ipkhjnm9us4bl0clgbg16ugii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
