@@ -8,13 +8,15 @@
 
     <ImageView
         android:id="@+id/splash"
-        android:layout_width="wrap_content"
-        android:layout_height="280dp"
-        android:background="@drawable/app_logo"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/_350sdp"
+        android:layout_height="@dimen/_570sdp"
+        android:background="@drawable/app_splash"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
