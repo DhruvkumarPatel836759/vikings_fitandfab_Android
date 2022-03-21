@@ -32,7 +32,7 @@ public class UserTypeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 user=false;
-                startActivity(new Intent(UserTypeActivity.this,LoginActivity.class));
+//                startActivity(new Intent(UserTypeActivity.this,LoginActivity.class));
             }
         });
     }
