@@ -21,8 +21,6 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
 
-
-
                 if (FirebaseAuth.getInstance().getCurrentUser() != null) {
                     UserTypeActivity.user=true;
                     startActivity(new Intent(Splash.this, MainActivity.class));

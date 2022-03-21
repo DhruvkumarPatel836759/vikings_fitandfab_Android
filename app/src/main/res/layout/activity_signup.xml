@@ -250,7 +250,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/_20sdp"
                     android:src="@drawable/show"
-                    app:tint="@color/colorPrimary"/>
+                   />
 
             </RelativeLayout>
 
@@ -288,7 +288,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/_20sdp"
                     android:src="@drawable/show"
-                    app:tint="@color/colorPrimary" />
+                     />
 
             </RelativeLayout>
 
