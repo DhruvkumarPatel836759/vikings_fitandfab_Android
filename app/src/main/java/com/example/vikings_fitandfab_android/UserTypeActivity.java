@@ -10,15 +10,21 @@ import com.example.vikings_fitandfab_android.databinding.ActivityUserTypeBinding
 
 public class UserTypeActivity extends AppCompatActivity {
 
+
+
     public static boolean user;
 
     ActivityUserTypeBinding binding;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding=ActivityUserTypeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
 
         binding.userButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,8 +38,13 @@ public class UserTypeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 user=false;
-//                startActivity(new Intent(UserTypeActivity.this,LoginActivity.class));
+                startActivity(new Intent(UserTypeActivity.this,LoginActivity.class));
             }
         });
+
+
+
+
+
     }
 }
