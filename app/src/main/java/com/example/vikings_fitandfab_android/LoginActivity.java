@@ -22,6 +22,11 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.example.vikings_fitandfab_android.databinding.ActivityLoginBinding;
 
+/**
+ * @author mayur
+ * */
+
+
 public class LoginActivity extends AppCompatActivity {
 
     ActivityLoginBinding binding;
