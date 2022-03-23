@@ -10,11 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vikings_fitandfab_Android">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserTypeActivity"
             android:exported="false" />
         <activity
             android:name=".Splash"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
