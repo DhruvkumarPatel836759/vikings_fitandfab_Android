@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.vikings_fitandfab_android.Class.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
     ProgressDialog progressDialog;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    public static UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
