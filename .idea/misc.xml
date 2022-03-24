@@ -13,11 +13,14 @@
         <entry key="..\:/vikings_fitandfab_Android/app/src/main/res/drawable/arrow_spinner.xml" value="0.1945" />
         <entry key="..\:/vikings_fitandfab_Android/app/src/main/res/drawable/button_shape.xml" value="0.1945" />
         <entry key="..\:/vikings_fitandfab_Android/app/src/main/res/drawable/shape_edittext.xml" value="0.1945" />
+        <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.13072916666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.11822916666666666" />
         <entry key="app/src/main/res/layout/activity_user_type.xml" value="0.11822916666666666" />
+        <entry key="app/src/main/res/layout/app_bar_drawer.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/content_drawer.xml" value="0.13072916666666667" />
       </map>
     </option>
   </component>

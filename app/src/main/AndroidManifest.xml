@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vikings_fitandfab_Android">
         <activity
+            android:name=".DrawerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Class.DrawerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity

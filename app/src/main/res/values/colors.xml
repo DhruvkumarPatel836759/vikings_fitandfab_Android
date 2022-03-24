@@ -9,4 +9,6 @@
     <color name="profile_default_tint">#e0e0e0</color>
     <color name="background_color">#f5f6fa</color>
     <color name="divider_color">#dcdde1</color>
+    <color name="lineGrayColor">#F1F1F1</color>
+    <color name="grayTextColor">#808080</color>
 </resources>
