@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vikings_fitandfab_Android">
         <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GymPackageActivity"
+            android:exported="false" />
+        <activity
             android:name=".DrawerActivity"
             android:exported="false" />
         <activity

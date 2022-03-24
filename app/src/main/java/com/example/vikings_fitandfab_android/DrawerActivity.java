@@ -5,17 +5,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 
 import com.example.vikings_fitandfab_android.databinding.ActivityDrawerBinding;
 public class DrawerActivity extends AppCompatActivity {
+
+
+    FrameLayout fragmentLayout;
+
+    FragmentManager fragmentManager = getSupportFragmentManager();
     private ActivityDrawerBinding binding;
+
+    ImageView home, stopwatchImage, bMIImage, planingImage, shopImage;
+    ImageView homeLine, stopwatchLine, bMILine, planingLine, shopLine;
     ImageView profileImageView, profileImageViewdrawer;
     TextView nameTextView, emailTextView;
 
@@ -26,21 +36,13 @@ public class DrawerActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-        profileImageView =
+        profileImageView = findViewById(R.id.profileImageView);
 
-                findViewById(R.id.profileImageView);
+        profileImageViewdrawer = findViewById(R.id.profileImageViewdrawer);
 
-        profileImageViewdrawer =
+        nameTextView = findViewById(R.id.nameTextView);
 
-                findViewById(R.id.profileImageViewdrawer);
-
-        nameTextView =
-
-                findViewById(R.id.nameTextView);
-
-        emailTextView =
-
-                findViewById(R.id.emailTextView);
+        emailTextView = findViewById(R.id.emailTextView);
 
 
         nameTextView.setText(LoginActivity.userModel.getName());
@@ -74,5 +76,7 @@ public class DrawerActivity extends AppCompatActivity {
                         drawer.open();
                     }
                 });
+
+
     }
 }
