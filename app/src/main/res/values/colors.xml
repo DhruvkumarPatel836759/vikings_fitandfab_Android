@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_grey">#dfe6e9</color>
@@ -9,6 +10,19 @@
     <color name="profile_default_tint">#e0e0e0</color>
     <color name="background_color">#f5f6fa</color>
     <color name="divider_color">#dcdde1</color>
+
+
+
+
+
+
     <color name="lineGrayColor">#F1F1F1</color>
     <color name="grayTextColor">#808080</color>
+    <color name="groupNameTextColor">#959595</color>
+    <color name="chatBubbleGrayColor">#F3F3F3</color>
+    <color name="dateGrayColor">#F5F5F5</color>
+    <color name="topicBGColor">#F1F1F1</color>
+    <color name="profileBGColor">#F6F6F6</color>
+    <color name="shadowColor">#20114084</color>
+    <color name="chipcolor">#1A114084</color>
 </resources>
