@@ -48,4 +48,210 @@
         app:layout_constraintTop_toTopOf="@+id/headerImageView"
         app:layout_constraintBottom_toBottomOf="@+id/headerImageView"
         app:layout_constraintHorizontal_bias="0.95"/>
+
+
+    <FrameLayout
+        android:id="@+id/fragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerImageView"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBarBG"/>
+
+    <ImageView
+        android:id="@+id/bottomBarBG"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        android:background="@drawable/bottom_bar_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="14dp"
+        android:layout_height="16dp"
+        android:src="@drawable/home_sel"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
+        app:layout_constraintEnd_toStartOf="@+id/stopwatchImage"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintWidth_percent="0.05"
+        app:tint="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/homeLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@drawable/bottom_bar_line"
+        app:layout_constraintStart_toStartOf="@+id/home"
+        app:layout_constraintEnd_toEndOf="@+id/home"
+        app:layout_constraintTop_toBottomOf="@+id/home"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:backgroundTint="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/stopwatchImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.05"
+        app:layout_constraintHeight_percent="0.03"
+        android:src="@drawable/stopwatch"
+        app:layout_constraintStart_toEndOf="@+id/home"
+        app:layout_constraintEnd_toStartOf="@+id/bMIImage"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
+        app:tint="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/stopwatchLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@drawable/bottom_bar_line"
+        app:layout_constraintStart_toStartOf="@+id/stopwatchImage"
+        app:layout_constraintEnd_toEndOf="@+id/stopwatchImage"
+        app:layout_constraintTop_toBottomOf="@+id/stopwatchImage"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:visibility="gone"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/bMIImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.05"
+        app:layout_constraintHeight_percent="0.03"
+        android:src="@drawable/bmi"
+        app:layout_constraintStart_toEndOf="@+id/stopwatchImage"
+        app:layout_constraintEnd_toStartOf="@+id/planingImage"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
+        app:tint="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/bMILine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@drawable/bottom_bar_line"
+        app:layout_constraintStart_toStartOf="@+id/bMIImage"
+        app:layout_constraintEnd_toEndOf="@+id/bMIImage"
+        app:layout_constraintTop_toBottomOf="@+id/bMIImage"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:visibility="gone"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/planingImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.05"
+        app:layout_constraintHeight_percent="0.03"
+        android:src="@drawable/planning"
+        app:layout_constraintStart_toEndOf="@+id/bMIImage"
+        app:layout_constraintEnd_toStartOf="@+id/shopImage"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
+        app:tint="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/planingLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@drawable/bottom_bar_line"
+        app:layout_constraintStart_toStartOf="@+id/planingImage"
+        app:layout_constraintEnd_toEndOf="@+id/planingImage"
+        app:layout_constraintTop_toBottomOf="@+id/planingImage"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:visibility="gone"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/shopImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.05"
+        app:layout_constraintHeight_percent="0.03"
+        android:src="@drawable/suplement"
+        app:layout_constraintStart_toEndOf="@+id/planingImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
+        app:tint="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/shopLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@drawable/bottom_bar_line"
+        app:layout_constraintStart_toStartOf="@+id/shopImage"
+        app:layout_constraintEnd_toEndOf="@+id/shopImage"
+        app:layout_constraintTop_toBottomOf="@+id/shopImage"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:visibility="gone"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.09"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
+        app:layout_constraintEnd_toEndOf="@id/bottomBarBG"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"/>
+
+    <Button
+        android:id="@+id/stopwatchButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
+        app:layout_constraintEnd_toEndOf="@id/bottomBarBG"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <Button
+        android:id="@+id/bMIButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
+        app:layout_constraintEnd_toEndOf="@id/bottomBarBG"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"/>
+
+    <Button
+        android:id="@+id/planingButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.7"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
+        app:layout_constraintEnd_toEndOf="@id/bottomBarBG"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"/>
+
+    <Button
+        android:id="@+id/shopButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.9"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
+        app:layout_constraintEnd_toEndOf="@id/bottomBarBG"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
