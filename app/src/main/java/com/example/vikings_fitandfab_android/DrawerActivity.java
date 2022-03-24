@@ -20,12 +20,7 @@ public class DrawerActivity extends AppCompatActivity {
 
 
     FrameLayout fragmentLayout;
-//    private Fragment homeFragment = new HomeFragment();
-//    private Fragment stopwatchFragment = new StopwatchFragment();
-//    private Fragment bmiFragment = new BMIFragment();
-//    private Fragment shopFragment = new ShopFragment();
-//    private Fragment planFragment = new PlanFragment();
-//    private Fragment activeFragment = homeFragment;
+
     FragmentManager fragmentManager = getSupportFragmentManager();
     private ActivityDrawerBinding binding;
 
@@ -81,5 +76,7 @@ public class DrawerActivity extends AppCompatActivity {
                         drawer.open();
                     }
                 });
+
+
     }
 }
