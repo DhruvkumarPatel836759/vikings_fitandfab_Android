@@ -25,4 +25,16 @@
     <color name="profileBGColor">#F6F6F6</color>
     <color name="shadowColor">#20114084</color>
     <color name="chipcolor">#1A114084</color>
+
+
+    <color name="orange">#FC6853</color>
+    <color name="ProgressColor">#04befe</color>
+    <color name="charttextcolor">#a9a9a9</color>
+    <color name="color_range_blue">#1cb7ff</color>
+    <color name="color_range_green">#258c42</color>
+    <color name="color_range_orange">#ff6000</color>
+    <color name="color_range_pink">#ff0078</color>
+    <color name="color_range_yellow">#fbc531</color>
+    <color name="toolbarcolor">#de6cff</color>
+    <color name="dark_ligh_color">#535E6A</color>
 </resources>
