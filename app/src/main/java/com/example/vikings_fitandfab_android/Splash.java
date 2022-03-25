@@ -1,15 +1,20 @@
 package com.example.vikings_fitandfab_android;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.example.vikings_fitandfab_android.Class.UserModel;
 
 public class Splash extends AppCompatActivity {
     String admin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,42 +27,36 @@ public class Splash extends AppCompatActivity {
             public void run() {
 
                 if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-                    UserTypeActivity.user=true;
-                    startActivity(new Intent(Splash.this, MainActivity.class));
-                    finish();
-//                    FirebaseFirestore.getInstance()
-//                            .collection("users")
-//                            .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                            .get()
-//                            .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-//                                @Override
-//                                public void onSuccess(DocumentSnapshot documentSnapshot) {
-//                                    if (documentSnapshot != null) {
-//                                        userModel = documentSnapshot.toObject(UserModel.class);
-//                                        if (userModel.isVerification()) {
-//                                            startActivity(new Intent(Splash.this, UserMainActivity.class));
-//                                            finish();
-//                                        }
-//                                        else {
-//                                            FirebaseAuth.getInstance().signOut();
-//                                            startActivity(new Intent(Splash.this, UserTypeActivity.class));
-//                                            finish();
-//                                            Toast.makeText(Splash.this, "Admin remove Verification. Please contact admin ", Toast.LENGTH_SHORT).show();
-//                                        }
-//
-//                                    }
-//                                }
-//                            });
+                    UserTypeActivity.user = true;
+                    FirebaseFirestore.getInstance()
+                            .collection("users")
+                            .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .get()
+                            .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                @Override
+                                public void onSuccess(DocumentSnapshot documentSnapshot) {
 
+                                    if (documentSnapshot != null) {
+                                        LoginActivity.userModel = documentSnapshot.toObject(UserModel.class);
+                                        if (LoginActivity.userModel.getGymPackage() == null) {
+                                            startActivity(new Intent(Splash.this, GymPackageActivity.class));
+                                            finish();
 
-                }
-                else if (admin.equals("admin")) {
-                    UserTypeActivity.user=false;
-                    startActivity(new Intent(Splash.this, MainActivity.class));
+                                        } else {
+                                            startActivity(new Intent(Splash.this, DrawerActivity.class));
+                                            finish();
+                                        }
+
+                                    }
+                                }
+                            });
+
+                } else if (admin.equals("admin")) {
+                    UserTypeActivity.user = false;
+                    startActivity(new Intent(Splash.this, AdminActivity.class));
                     finish();
 
-                }
-                else {
+                } else {
                     startActivity(new Intent(Splash.this, UserTypeActivity.class));
                     finish();
                 }

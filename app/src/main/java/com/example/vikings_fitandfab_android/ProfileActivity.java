@@ -37,11 +37,11 @@ public class ProfileActivity extends AppCompatActivity {
 
         findViewById(R.id.backImageView)
                 .setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        onBackPressed();
-                    }
-                });
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         binding.nameEditText.setText(userModel.getName());
         binding.ageEditText.setText(userModel.getAge());

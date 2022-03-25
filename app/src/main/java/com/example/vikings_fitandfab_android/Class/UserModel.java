@@ -1,7 +1,7 @@
 package com.example.vikings_fitandfab_android.Class;
 
 public class UserModel {
-    String name, email, age, height, weight, gender, allergie, gymPackage;
+    String name,email,age,height,weight,gender,allergie,gymPackage;
 
     public UserModel() {
     }
@@ -65,6 +65,7 @@ public class UserModel {
     public String getGymPackage() {
         return gymPackage;
     }
+
     public void setGymPackage(String gymPackage) {
         this.gymPackage = gymPackage;
     }

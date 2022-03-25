@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.vikings_fitandfab_android.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
 

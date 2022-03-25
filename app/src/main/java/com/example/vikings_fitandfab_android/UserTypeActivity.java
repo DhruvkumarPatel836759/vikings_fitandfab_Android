@@ -31,7 +31,6 @@ public class UserTypeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 user=true;
                 startActivity(new Intent(UserTypeActivity.this,SignupActivity.class));
-
             }
         });
         binding.adminButton.setOnClickListener(new View.OnClickListener() {

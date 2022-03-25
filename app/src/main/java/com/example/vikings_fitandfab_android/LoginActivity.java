@@ -1,5 +1,6 @@
 package com.example.vikings_fitandfab_android;
 
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +12,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.vikings_fitandfab_android.Class.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -20,24 +20,21 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.example.vikings_fitandfab_android.Class.UserModel;
 import com.example.vikings_fitandfab_android.databinding.ActivityLoginBinding;
-
-/**
- * @author mayur
- * */
-
 
 public class LoginActivity extends AppCompatActivity {
 
     ActivityLoginBinding binding;
     ProgressDialog progressDialog;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
     public static UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding= ActivityLoginBinding.inflate(getLayoutInflater());
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         progressDialog = new ProgressDialog(this, R.style.AppCompatAlertDialogStyle);
@@ -98,24 +95,19 @@ public class LoginActivity extends AppCompatActivity {
                                                     .putString("admin", "admin")
                                                     .commit();
 
-                                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                            startActivity(new Intent(LoginActivity.this, AdminActivity.class));
                                             finish();
-
-
 
 
                                         } else {
                                             progressDialog.dismiss();
                                             Toast.makeText(LoginActivity.this, "Email or Password incorrect", Toast.LENGTH_SHORT).show();
                                         }
-
-
                                     }
 
                                 }
                             });
-                }
-                else {
+                } else {
 
                     String Email = binding.emailEditText.getText().toString();
                     String Password = binding.passwordEditText.getText().toString();
@@ -138,46 +130,28 @@ public class LoginActivity extends AppCompatActivity {
                                         }
                                         if (task.isSuccessful()) {
 
-//                                            getSharedPreferences("Humanary_ref", MODE_PRIVATE).edit()
-//                                                    .putString("userEmail", Email)
-//                                                    .commit();
+                                            FirebaseFirestore.getInstance()
+                                                    .collection("users")
+                                                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                    .get()
+                                                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                                        @Override
+                                                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                                            progressDialog.dismiss();
+                                                            if (documentSnapshot != null) {
+                                                                userModel = documentSnapshot.toObject(UserModel.class);
+                                                                if (userModel.getGymPackage() == null) {
+                                                                    startActivity(new Intent(LoginActivity.this, GymPackageActivity.class));
+                                                                    finish();
 
-                                            progressDialog.dismiss();
-                                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                                            finish();
-//
+                                                                } else {
+                                                                    startActivity(new Intent(LoginActivity.this, DrawerActivity.class));
+                                                                    finish();
+                                                                }
 
-//                                            FirebaseFirestore.getInstance()
-//                                                    .collection("users")
-//                                                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                                                    .get()
-//                                                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-//                                                        @Override
-//                                                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-//                                                            if (documentSnapshot != null) {
-//                                                                userModel = documentSnapshot.toObject(UserModel.class);
-//                                                                if (userModel.isVerification()) {
-//
-//
-//                                                                    FirebaseFirestore.getInstance()
-//                                                                            .collection("users")
-//                                                                            .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                                                                            .update("token",token).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                                                                        @Override
-//                                                                        public void onSuccess(Void unused) {
-//
-//                                                                        }
-//                                                                    });
-//
-//
-//                                                                } else {
-//                                                                    progressDialog.dismiss();
-//                                                                    Toast.makeText(LoginActivity.this, "Admin not verify yet. Please wait...", Toast.LENGTH_SHORT).show();
-//                                                                }
-//
-//                                                            }
-//                                                        }
-//                                                    });
+                                                            }
+                                                        }
+                                                    });
                                         }
                                     }
                                 })
@@ -190,6 +164,7 @@ public class LoginActivity extends AppCompatActivity {
                                 });
                     }
                 }
+
             }
         });
     }

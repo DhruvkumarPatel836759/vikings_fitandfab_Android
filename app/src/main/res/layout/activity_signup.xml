@@ -40,7 +40,7 @@
         android:id="@+id/create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account"
+        android:text="Signup to Create Account"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/_24sdp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,6 +55,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_10sdp"
         android:overScrollMode="never"
+        android:layout_marginBottom="@dimen/_16sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_2sdp"
                 android:text="Name"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
 
@@ -80,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp"
                 android:inputType="text"
@@ -92,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_2sdp"
                 android:text="Gender"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
 
@@ -100,7 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp" >
 
@@ -117,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_2sdp"
                 android:text="Age"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
 
@@ -125,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp"
                 android:hint="years"
@@ -138,6 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_2sdp"
                 android:text="Weight"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
             <EditText
@@ -145,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp"
                 android:hint="In Kg"
@@ -157,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_2sdp"
                 android:text="Height"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
             <EditText
@@ -164,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:hint="In feet"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp"
@@ -188,7 +194,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp"
                 android:inputType="text"
@@ -209,7 +215,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp"
                 android:inputType="textEmailAddress"
@@ -229,7 +235,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp">
 
@@ -250,7 +256,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/_20sdp"
                     android:src="@drawable/show"
-                   />
+                    app:tint="@color/colorPrimary"/>
 
             </RelativeLayout>
 
@@ -267,7 +273,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/shape_edittext"
                 android:elevation="@dimen/_2sdp">
 
@@ -288,43 +294,9 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/_20sdp"
                     android:src="@drawable/show"
-                     />
+                    app:tint="@color/colorPrimary" />
 
             </RelativeLayout>
-
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginStart="@dimen/_2sdp"-->
-            <!--                android:layout_marginTop="@dimen/_8sdp"-->
-            <!--                android:text="Select User Type"-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:textSize="@dimen/_14sdp" />-->
-
-
-            <!--            <RadioGroup-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginBottom="@dimen/_10sdp"-->
-            <!--                android:orientation="horizontal">-->
-
-
-            <!--                <RadioButton-->
-            <!--                    android:id="@+id/userRadio"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="@dimen/_30sdp"-->
-            <!--                    android:layout_marginEnd="@dimen/_20sdp"-->
-            <!--                    android:checked="true"-->
-            <!--                    android:text="User"-->
-            <!--                    android:textColor="@color/black" />-->
-
-            <!--                <RadioButton-->
-            <!--                    android:id="@+id/adminRadio"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="@dimen/_30sdp"-->
-            <!--                    android:text="Admin"-->
-            <!--                    android:textColor="@color/black" />-->
-            <!--            </RadioGroup>-->
 
 
             <Button

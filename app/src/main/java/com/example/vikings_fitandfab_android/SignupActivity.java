@@ -1,48 +1,39 @@
 package com.example.vikings_fitandfab_android;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.vikings_fitandfab_android.Class.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.example.vikings_fitandfab_android.Class.UserModel;
 import com.example.vikings_fitandfab_android.databinding.ActivitySignupBinding;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 
 public class SignupActivity extends AppCompatActivity {
 
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     ProgressDialog progressDialog;
     ActivitySignupBinding binding;
-
-    String gender="Male";
+    String gender = "Male";
 
 
     @Override
@@ -57,11 +48,10 @@ public class SignupActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
 
 
-
         String[] genderlist = {"Male", "Female"};
 
 
-        ArrayAdapter<String> genderadapter =new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,genderlist);
+        ArrayAdapter<String> genderadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, genderlist);
         binding.genderSpinner.setAdapter(genderadapter);
         binding.genderSpinner.setDropDownVerticalOffset(100);
         binding.genderSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -76,7 +66,6 @@ public class SignupActivity extends AppCompatActivity {
 
             }
         });
-
 
 
         binding.eyeopenImageView.setOnClickListener(new View.OnClickListener() {
@@ -129,14 +118,13 @@ public class SignupActivity extends AppCompatActivity {
                 String Password = binding.passwordEditText.getText().toString();
                 String confirmPassword = binding.confrimEdithText.getText().toString();
 
-                if (Name.isEmpty() || Email.isEmpty() || age.isEmpty() || Password.isEmpty() ||height.isEmpty() || allergie.isEmpty() || weight.isEmpty() || confirmPassword.isEmpty()) {
+                if (Name.isEmpty() || Email.isEmpty() || age.isEmpty() || Password.isEmpty() || height.isEmpty() || allergie.isEmpty() || weight.isEmpty() || confirmPassword.isEmpty()) {
 
                     Toast.makeText(SignupActivity.this, "All Fields Required", Toast.LENGTH_SHORT).show();
                 } else if (!Email.matches(emailPattern)) {
                     Toast.makeText(SignupActivity.this, "Please Enter Valid Email", Toast.LENGTH_SHORT).show();
 
-                }
-                else if (!Password.equals(confirmPassword)) {
+                } else if (!Password.equals(confirmPassword)) {
                     Toast.makeText(SignupActivity.this, "Password not matches", Toast.LENGTH_SHORT).show();
                 } else {
                     progressDialog.show();
@@ -145,8 +133,6 @@ public class SignupActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-
-
                                         HashMap<String, Object> hashMap = new HashMap<>();
                                         hashMap.put("name", Name);
                                         hashMap.put("email", Email);
@@ -164,10 +150,23 @@ public class SignupActivity extends AppCompatActivity {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
                                                         if (task.isSuccessful()) {
-                                                            progressDialog.dismiss();
-                                                            Intent intent = new Intent(SignupActivity.this, MainActivity.class);
-                                                            startActivity(intent);
-                                                            finish();
+                                                            FirebaseFirestore.getInstance()
+                                                                    .collection("users")
+                                                                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                                    .get()
+                                                                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                                                        @Override
+                                                                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                                                            progressDialog.dismiss();
+                                                                            if (documentSnapshot != null) {
+                                                                                LoginActivity.userModel = documentSnapshot.toObject(UserModel.class);
+                                                                                Intent intent = new Intent(SignupActivity.this, DrawerActivity.class);
+                                                                                startActivity(intent);
+                                                                                finish();
+                                                                            }
+                                                                        }
+                                                                    });
+
 
                                                         }
                                                     }
@@ -179,12 +178,8 @@ public class SignupActivity extends AppCompatActivity {
                                                         Log.e("SignUp", "faliureupload" + e.getLocalizedMessage());
                                                     }
                                                 });
-
-
                                     }
                                 }
-
-
                             })
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -195,13 +190,11 @@ public class SignupActivity extends AppCompatActivity {
                                 }
                             });
                 }
-
             }
         });
 
 
     }
-
 
 
 }

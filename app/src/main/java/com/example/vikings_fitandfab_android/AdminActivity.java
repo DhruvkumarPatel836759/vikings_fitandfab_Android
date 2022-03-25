@@ -1,10 +1,12 @@
 package com.example.vikings_fitandfab_android;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import com.example.vikings_fitandfab_android.databinding.ActivityAdminBinding;
+
 
 public class AdminActivity extends AppCompatActivity {
 
