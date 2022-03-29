@@ -69,6 +69,4 @@
             android:src="@drawable/add_to_cart_btn" />
 
     </LinearLayout>
-
-
 </com.zyp.cardview.YcCardView>
