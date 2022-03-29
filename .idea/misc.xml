@@ -47,16 +47,20 @@
         <entry key="..\:/vikings_fitandfab_Android/app/src/main/res/layout/fragment_b_m_i.xml" value="0.1" />
         <entry key="..\:/vikings_fitandfab_Android/app/src/main/res/layout/fragment_stopwatch.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/a1_grad.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_next.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/ic_workout.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.1295" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.11822916666666666" />
         <entry key="app/src/main/res/layout/activity_user_type.xml" value="0.11822916666666666" />
+        <entry key="app/src/main/res/layout/activity_workout.xml" value="0.11875" />
         <entry key="app/src/main/res/layout/fragment_stopwatch.xml" value="0.11614583333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

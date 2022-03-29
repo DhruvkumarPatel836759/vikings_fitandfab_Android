@@ -48,4 +48,5 @@ dependencies {
     implementation 'com.yashovardhan99.timeit:timeit:1.2.0'
     implementation 'com.zyp.cardview:cardview:1.0.1'
     implementation 'net.idik:slimadapter:2.1.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
 }
