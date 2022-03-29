@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vikings_fitandfab_android">
 
     <application
@@ -10,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GYM">
         <activity
-            android:name=".StopWatchActivity"
+            android:name=".CartActivity"
             android:exported="false" />
         <activity
             android:name=".ProfileActivity"
@@ -35,7 +36,9 @@
             android:exported="false" />
         <activity
             android:name=".DrawerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustNothing"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".SignupActivity"
             android:exported="false" />

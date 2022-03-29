@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StopWatchActivity">
-
+    tools:context=".CartActivity">
 
     <ImageView
         android:id="@+id/splash1"
@@ -14,11 +13,11 @@
         android:src="@drawable/app_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHeight_percent="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintWidth_percent="0.4" />
+        app:layout_constraintWidth_percent="0.3" />
 
     <ImageView
         android:id="@+id/backImageView"
@@ -35,16 +34,53 @@
         app:layout_constraintVertical_bias="0.1"
         app:tint="@color/colorPrimary" />
 
+
+
     <TextView
-        android:id="@+id/watchtext"
+        android:id="@+id/text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/a1_grad"
+        app:layout_constraintTop_toBottomOf="@+id/splash1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:gravity="center"
+        android:text="My Cart"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layout_constraintBottom_toTopOf="@+id/checkoutButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        tools:listitem="@layout/item_cart" />
+
+    <Button
+        android:id="@+id/checkoutButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:text="CheckOut"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintWidth_percent="0.8" />
+
 
 
 

@@ -369,8 +369,8 @@
 
                     <ImageView
                         android:id="@+id/idealWeightIcon"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="19dp"
+                        android:layout_height="21dp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/weighing"

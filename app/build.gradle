@@ -45,4 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.yashovardhan99.timeit:timeit:1.2.0'
+    implementation 'com.zyp.cardview:cardview:1.0.1'
+    implementation 'net.idik:slimadapter:2.1.2'
 }

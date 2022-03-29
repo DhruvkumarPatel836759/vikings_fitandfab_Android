@@ -33,12 +33,10 @@ public class DrawerActivity extends AppCompatActivity {
     FragmentManager fragmentManager = getSupportFragmentManager();
     private ActivityDrawerBinding binding;
 
-
     ImageView home, stopwatchImage, bMIImage, planingImage, shopImage;
     ImageView homeLine, stopwatchLine, bMILine, planingLine, shopLine;
     ImageView profileImageView, profileImageViewdrawer;
     TextView nameTextView, emailTextView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,16 +44,13 @@ public class DrawerActivity extends AppCompatActivity {
         binding = ActivityDrawerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
         profileImageView = findViewById(R.id.profileImageView);
         profileImageViewdrawer = findViewById(R.id.profileImageViewdrawer);
         nameTextView = findViewById(R.id.nameTextView);
         emailTextView = findViewById(R.id.emailTextView);
 
-
         nameTextView.setText(LoginActivity.userModel.getName());
         emailTextView.setText(LoginActivity.userModel.getEmail());
-
 
         profileImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,13 +69,13 @@ public class DrawerActivity extends AppCompatActivity {
             }
         });
 
-//        findViewById(R.id.resourceButton).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                drawer.close();
-//                startActivity(new Intent(DrawerActivity.this, ResourcesArticlesActivity.class));
-//            }
-//        });
+        findViewById(R.id.resourceButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.close();
+                startActivity(new Intent(DrawerActivity.this, CartActivity.class));
+            }
+        });
 
         findViewById(R.id.logoutButton).setOnClickListener(new View.OnClickListener() {
             @Override

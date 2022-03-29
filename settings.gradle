@@ -10,6 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        maven { url 'https://jcenter.bintray.com' }
     }
 }
 rootProject.name = "vikings_fitandfab_Android"
