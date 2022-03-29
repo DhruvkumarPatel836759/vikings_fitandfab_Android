@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_order.xml" value="0.1" />
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_order_conformation.xml" value="0.1" />
         <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/vikings_fitandfab_Android/app/src/main/res/drawable/button_shape.xml" value="0.184" />
         <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/vikings_fitandfab_Android/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/vikings_fitandfab_Android/app/src/main/res/layout/activity_signup.xml" value="0.22826086956521738" />
@@ -56,7 +58,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
