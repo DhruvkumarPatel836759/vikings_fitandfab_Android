@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyp.cardview.YcCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ycCardCornerRadius="@dimen/_8sdp"
+    app:ycCardElevation="@dimen/_3sdp"
+    app:ycStartShadowColor="#4DEA1743">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"/>
+        <TextView
+            android:id="@+id/orderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID16454545"
+            android:layout_toEndOf="@id/id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"/>
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment: "
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_below="@id/id"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"/>
+        <TextView
+            android:id="@+id/orderPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$4"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_toEndOf="@id/pay"
+            android:textColor="@color/black"
+            android:layout_below="@id/id"
+            android:textSize="@dimen/_12sdp"/>
+        <TextView
+            android:id="@+id/pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Products: "
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_below="@id/pay"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"/>
+        <TextView
+            android:id="@+id/orderProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$4"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_toEndOf="@id/pro"
+            android:textColor="@color/black"
+            android:layout_below="@id/pay"
+            android:textSize="@dimen/_12sdp"/>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Pending"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+
+</com.zyp.cardview.YcCardView>

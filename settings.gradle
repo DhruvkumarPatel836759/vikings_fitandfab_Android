@@ -12,6 +12,8 @@ dependencyResolutionManagement {
         mavenCentral()
         jcenter()
         maven { url 'https://jcenter.bintray.com' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+
     }
 }
 rootProject.name = "vikings_fitandfab_Android"
