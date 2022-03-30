@@ -1,4 +1,4 @@
-package com.example.vikings_fitandfab_android;
+package com.example.vikings_fitandfab_android.Admin;
 
 
 import androidx.appcompat.app.AppCompatActivity;

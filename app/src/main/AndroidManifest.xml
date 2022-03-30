@@ -48,7 +48,7 @@
             android:name=".SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminActivity"
+            android:name=".Admin.AdminActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
