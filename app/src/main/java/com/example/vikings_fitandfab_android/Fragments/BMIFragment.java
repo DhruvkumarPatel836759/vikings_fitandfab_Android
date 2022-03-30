@@ -235,7 +235,8 @@ public class BMIFragment extends Fragment implements View.OnClickListener, TextW
             this.txtbmivalue.setText("Morbidly Obese");
             this.txtbmivalue.setTextColor(getActivity().getResources().getColor(R.color.color_range_blue));
         } else {
-            this.txtbmivalue.setText("");
+            this.txtbmivalue.setTextColor(getActivity().getResources().getColor(R.color.color_range_pink));
+            this.txtbmivalue.setText("Under weight");
         }
         this.seekBar.setProgress(i);
         this.txtbmical.setText(Formula.format(d));
