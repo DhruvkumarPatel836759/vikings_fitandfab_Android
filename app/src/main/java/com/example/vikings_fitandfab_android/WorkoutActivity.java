@@ -266,7 +266,7 @@ public class WorkoutActivity extends AppCompatActivity {
             binding.glutesFlipper.setVisibility(View.VISIBLE);
             binding.text.setText("GLUTES");
 
-            binding.exNumber.setText("WORKOUT :  1 / 15");
+            binding.exNumber.setText("WORKOUT :  1 / 5");
 
             btnNext.setOnClickListener(new View.OnClickListener() {
                 @SuppressLint({"SetTextI18n", "UseCompatLoadingForDrawables"})
