@@ -47,6 +47,7 @@
         <entry key="..\:/vikings_fitandfab_Android/app/src/main/res/layout/fragment_b_m_i.xml" value="0.1" />
         <entry key="..\:/vikings_fitandfab_Android/app/src/main/res/layout/fragment_stopwatch.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/a1_grad.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_done.xml" value="0.144" />
         <entry key="app/src/main/res/drawable/ic_next.xml" value="0.1295" />
         <entry key="app/src/main/res/drawable/ic_workout.xml" value="0.1295" />
         <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.1295" />
@@ -56,7 +57,9 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.11822916666666666" />
         <entry key="app/src/main/res/layout/activity_user_type.xml" value="0.11822916666666666" />
         <entry key="app/src/main/res/layout/activity_workout.xml" value="0.11875" />
+        <entry key="app/src/main/res/layout/content_drawer.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/fragment_stopwatch.xml" value="0.11614583333333334" />
+        <entry key="app/src/main/res/layout/fragment_workout.xml" value="0.1046875" />
       </map>
     </option>
   </component>
