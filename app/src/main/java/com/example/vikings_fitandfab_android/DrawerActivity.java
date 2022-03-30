@@ -13,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.vikings_fitandfab_android.Fragments.WorkoutFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.example.vikings_fitandfab_android.Fragments.BMIFragment;
 import com.example.vikings_fitandfab_android.Fragments.HomeFragment;
@@ -28,7 +29,7 @@ public class DrawerActivity extends AppCompatActivity {
     private Fragment stopwatchFragment = new StopwatchFragment();
     private Fragment bmiFragment = new BMIFragment();
     private Fragment shopFragment = new ShopFragment();
-    private Fragment planFragment = new PlanFragment();
+    private Fragment workoutFragment = new WorkoutFragment();
     private Fragment activeFragment = homeFragment;
     FragmentManager fragmentManager = getSupportFragmentManager();
     private ActivityDrawerBinding binding;
@@ -147,7 +148,7 @@ public class DrawerActivity extends AppCompatActivity {
 
         fragmentLayout = findViewById(R.id.fragmentLayout);
         fragmentManager.beginTransaction().add(R.id.fragmentLayout, shopFragment, "5").hide(shopFragment).commit();
-        fragmentManager.beginTransaction().add(R.id.fragmentLayout, planFragment, "4").hide(planFragment).commit();
+        fragmentManager.beginTransaction().add(R.id.fragmentLayout, workoutFragment, "4").hide(workoutFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragmentLayout, bmiFragment, "3").hide(bmiFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragmentLayout, stopwatchFragment, "2").hide(stopwatchFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragmentLayout, homeFragment, "1").commit();
@@ -179,7 +180,7 @@ public class DrawerActivity extends AppCompatActivity {
                     home.setImageResource(R.drawable.home_sel);
                     stopwatchImage.setImageResource(R.drawable.stopwatch);
                     bMIImage.setImageResource(R.drawable.bmi);
-                    planingImage.setImageResource(R.drawable.planning);
+                    planingImage.setImageResource(R.drawable.workout_uncel);
                     shopImage.setImageResource(R.drawable.suplement);
                     homeLine.setVisibility(View.VISIBLE);
                     stopwatchLine.setVisibility(View.GONE);
@@ -198,7 +199,7 @@ public class DrawerActivity extends AppCompatActivity {
                     home.setImageResource(R.drawable.home_unsel);
                     stopwatchImage.setImageResource(R.drawable.stopwatch_sel);
                     bMIImage.setImageResource(R.drawable.bmi);
-                    planingImage.setImageResource(R.drawable.planning);
+                    planingImage.setImageResource(R.drawable.workout_uncel);
                     shopImage.setImageResource(R.drawable.suplement);
                     homeLine.setVisibility(View.GONE);
                     stopwatchLine.setVisibility(View.VISIBLE);
@@ -217,7 +218,7 @@ public class DrawerActivity extends AppCompatActivity {
                     home.setImageResource(R.drawable.home_unsel);
                     stopwatchImage.setImageResource(R.drawable.stopwatch);
                     bMIImage.setImageResource(R.drawable.bmi_sel);
-                    planingImage.setImageResource(R.drawable.planning);
+                    planingImage.setImageResource(R.drawable.workout_uncel);
                     shopImage.setImageResource(R.drawable.suplement);
                     homeLine.setVisibility(View.GONE);
                     stopwatchLine.setVisibility(View.GONE);
@@ -230,13 +231,13 @@ public class DrawerActivity extends AppCompatActivity {
         findViewById(R.id.planingButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (activeFragment != planFragment) {
-                    fragmentManager.beginTransaction().hide(activeFragment).show(planFragment).commit();
-                    activeFragment = planFragment;
+                if (activeFragment != workoutFragment) {
+                    fragmentManager.beginTransaction().hide(activeFragment).show(workoutFragment).commit();
+                    activeFragment = workoutFragment;
                     home.setImageResource(R.drawable.home_unsel);
                     stopwatchImage.setImageResource(R.drawable.stopwatch);
                     bMIImage.setImageResource(R.drawable.bmi);
-                    planingImage.setImageResource(R.drawable.planning_sel);
+                    planingImage.setImageResource(R.drawable.workout);
                     shopImage.setImageResource(R.drawable.suplement);
                     homeLine.setVisibility(View.GONE);
                     stopwatchLine.setVisibility(View.GONE);
@@ -255,7 +256,7 @@ public class DrawerActivity extends AppCompatActivity {
                     home.setImageResource(R.drawable.home_unsel);
                     stopwatchImage.setImageResource(R.drawable.stopwatch);
                     bMIImage.setImageResource(R.drawable.bmi);
-                    planingImage.setImageResource(R.drawable.planning);
+                    planingImage.setImageResource(R.drawable.workout_uncel);
                     shopImage.setImageResource(R.drawable.suplement_sel);
                     homeLine.setVisibility(View.GONE);
                     stopwatchLine.setVisibility(View.GONE);
@@ -265,5 +266,9 @@ public class DrawerActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
+
+
 }

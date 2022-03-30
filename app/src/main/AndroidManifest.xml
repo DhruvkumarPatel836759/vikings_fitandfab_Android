@@ -11,10 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GYM">
         <activity
-            android:name=".OrderConformationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".OrderActivity"
+
             android:exported="false" />
         <activity
             android:name=".CartActivity"

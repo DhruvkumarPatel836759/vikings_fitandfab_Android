@@ -148,7 +148,7 @@
         android:layout_height="0dp"
         app:layout_constraintWidth_percent="0.05"
         app:layout_constraintHeight_percent="0.03"
-        android:src="@drawable/planning"
+        android:src="@drawable/workout_uncel"
         app:layout_constraintStart_toEndOf="@+id/bMIImage"
         app:layout_constraintEnd_toStartOf="@+id/shopImage"
         app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
