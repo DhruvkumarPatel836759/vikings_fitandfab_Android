@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_admin.xml" value="0.1" />
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_gym_package.xml" value="0.1" />
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_order.xml" value="0.1" />
         <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/activity_order_conformation.xml" value="0.1" />
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/app_bar_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/conform_item.xml" value="0.1" />
         <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/Fit and Fb/app/src/main/res/layout/item_order.xml" value="0.1" />
         <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/vikings_fitandfab_Android/app/src/main/res/drawable/button_shape.xml" value="0.184" />
         <entry key="..\:/Users/A S U S  S T R I X/AndroidStudioProjects/vikings_fitandfab_Android/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
