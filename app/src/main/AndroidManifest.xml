@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GYM">
         <activity
-            android:name=".WorkoutActivity"
+
             android:exported="false" />
         <activity
             android:name=".CartActivity"
