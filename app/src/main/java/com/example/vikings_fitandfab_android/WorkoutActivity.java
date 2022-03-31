@@ -126,7 +126,7 @@ public class WorkoutActivity extends AppCompatActivity {
             binding.tricepesFlipper.setVisibility(View.GONE);
             binding.bicepsFlipper.setVisibility(View.GONE);
             binding.glutesFlipper.setVisibility(View.GONE);
-            binding.exNumber.setText("WORKOUT :  1 / 17");
+            binding.exNumber.setText("WORKOUT :  1 / 19");
             binding.text.setText("SHOULDERS");
 
             btnNext.setOnClickListener(new View.OnClickListener() {
