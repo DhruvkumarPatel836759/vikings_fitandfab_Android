@@ -126,7 +126,7 @@ public class WorkoutActivity extends AppCompatActivity {
             binding.tricepesFlipper.setVisibility(View.GONE);
             binding.bicepsFlipper.setVisibility(View.GONE);
             binding.glutesFlipper.setVisibility(View.GONE);
-            binding.exNumber.setText("WORKOUT :  1 / 17");
+            binding.exNumber.setText("WORKOUT :  1 / 19");
             binding.text.setText("SHOULDERS");
 
             btnNext.setOnClickListener(new View.OnClickListener() {
@@ -266,7 +266,7 @@ public class WorkoutActivity extends AppCompatActivity {
             binding.glutesFlipper.setVisibility(View.VISIBLE);
             binding.text.setText("GLUTES");
 
-            binding.exNumber.setText("WORKOUT :  1 / 15");
+            binding.exNumber.setText("WORKOUT :  1 / 5");
 
             btnNext.setOnClickListener(new View.OnClickListener() {
                 @SuppressLint({"SetTextI18n", "UseCompatLoadingForDrawables"})
