@@ -69,16 +69,19 @@ public class OrderActivity extends AppCompatActivity {
                     public void onInject(OrderModel data, IViewInjector injector) {
 //
 
-                        String product = null;
+                        String product = "";
+                        Log.e("chrcajj",""+data.getProducts().size());
+
                         for (int i = 0; i < data.getProducts().size();i++) {
 
                             if (i != data.getProducts().size() - 1) {
-                                product = data.getProducts().get(i).get("productName") +":"+data.getProducts().get(i).get("productQuantity")  + ",";
+                                product =product+data.getProducts().get(i).get("productName") +":"+data.getProducts().get(i).get("productQuantity")  + ",";
                             } else {
-                                product = data.getProducts().get(i).get("productName") +":"+data.getProducts().get(i).get("productQuantity");
+                                product =product+data.getProducts().get(i).get("productName") +":"+data.getProducts().get(i).get("productQuantity");
                             }
 
                         }
+                        Log.e("chrcajj",""+product);
                         injector.text(R.id.orderProduct,product);
                         injector.text(R.id.orderId,data.getOrderId());
                         injector.text(R.id.orderPayment,"$"+data.getPayment());

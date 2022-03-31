@@ -19,10 +19,15 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.example.vikings_fitandfab_android.Admin.AdminActivity;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.example.vikings_fitandfab_android.Class.UserModel;
 import com.example.vikings_fitandfab_android.databinding.ActivityLoginBinding;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -77,37 +82,42 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (!UserTypeActivity.user) {
                     progressDialog.show();
-                    FirebaseFirestore.getInstance()
-                            .collection("admin")
-                            .document("1QqXKFnkBiXGcWpz4N4d")
-                            .get()
-                            .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                                @Override
-                                public void onSuccess(DocumentSnapshot documentSnapshot) {
-                                    if (documentSnapshot.exists()) {
+                    FirebaseFirestore db = FirebaseFirestore.getInstance();
+                    db.collection("admin").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                        @Override
+                        public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
+                            progressDialog.dismiss();
 
-                                        String email = documentSnapshot.get("mail").toString();
-                                        String password = documentSnapshot.get("password").toString();
+                            if (e !=null)
+                            {
 
-                                        if (binding.emailEditText.getText().toString().equals(email) &&
-                                                binding.passwordEditText.getText().toString().equals(password)) {
-                                            progressDialog.dismiss();
-                                            getSharedPreferences("Gym_ref", MODE_PRIVATE).edit()
-                                                    .putString("admin", "admin")
-                                                    .commit();
+                            }
 
-                                            startActivity(new Intent(LoginActivity.this, AdminActivity.class));
-                                            finish();
+                            for (DocumentChange documentChange : documentSnapshots.getDocumentChanges())
+                            {
+                                String   mail =  documentChange.getDocument().getData().get("mail").toString();
+                                String  password   =  documentChange.getDocument().getData().get("password").toString();
+
+                                if (binding.emailEditText.getText().toString().equals(mail) &&
+                                        binding.passwordEditText.getText().toString().equals(password)) {
+                                    progressDialog.dismiss();
+                                    getSharedPreferences("Gym_ref", MODE_PRIVATE).edit()
+                                            .putString("admin", "admin")
+                                            .commit();
+
+                                    startActivity(new Intent(LoginActivity.this, AdminActivity.class));
+                                    finish();
 
 
-                                        } else {
-                                            progressDialog.dismiss();
-                                            Toast.makeText(LoginActivity.this, "Email or Password incorrect", Toast.LENGTH_SHORT).show();
-                                        }
-                                    }
-
+                                } else {
+                                    progressDialog.dismiss();
+                                    Toast.makeText(LoginActivity.this, "Email or Password incorrect", Toast.LENGTH_SHORT).show();
                                 }
-                            });
+
+                            }
+                        }
+                    });
+
                 } else {
 
                     String Email = binding.emailEditText.getText().toString();

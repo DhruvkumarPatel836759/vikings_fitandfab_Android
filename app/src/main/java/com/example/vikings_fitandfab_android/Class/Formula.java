@@ -3,7 +3,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
-public class Formula {public static double bmicalculatorkg(double d, double d2) {
+public class Formula {
+    public static double bmicalculatorkg(double d, double d2) {
     return d / (d2 * d2);
 }
 

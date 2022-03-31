@@ -1,7 +1,6 @@
 package com.example.vikings_fitandfab_android;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -17,7 +16,6 @@ import com.example.vikings_fitandfab_android.Fragments.WorkoutFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.example.vikings_fitandfab_android.Fragments.BMIFragment;
 import com.example.vikings_fitandfab_android.Fragments.HomeFragment;
-import com.example.vikings_fitandfab_android.Fragments.PlanFragment;
 import com.example.vikings_fitandfab_android.Fragments.ShopFragment;
 import com.example.vikings_fitandfab_android.Fragments.StopwatchFragment;
 import com.example.vikings_fitandfab_android.databinding.ActivityDrawerBinding;
@@ -70,11 +68,18 @@ public class DrawerActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.resourceButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.cartButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 drawer.close();
                 startActivity(new Intent(DrawerActivity.this, CartActivity.class));
+            }
+        });
+        findViewById(R.id.orderButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.close();
+                startActivity(new Intent(DrawerActivity.this, OrderActivity.class));
             }
         });
 
@@ -86,65 +91,6 @@ public class DrawerActivity extends AppCompatActivity {
                 finish();
             }
         });
-//        findViewById(R.id.shareAppButton).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent sendIntent = new Intent();
-//                sendIntent.setAction(Intent.ACTION_SEND);
-//                sendIntent.putExtra(Intent.EXTRA_TEXT,
-//                        "Hey check out my app at: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
-//                sendIntent.setType("text/plain");
-//                startActivity(sendIntent);
-//            }
-//        });
-//        findViewById(R.id.rateUsButton).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.humanary")));
-//            }
-//        });
-//        findViewById(R.id.instagramImageView).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Uri uri = Uri.parse("http://instagram.com/_u/");
-//                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
-//
-//                likeIng.setPackage("com.instagram.android");
-//
-//                try {
-//                    startActivity(likeIng);
-//                } catch (ActivityNotFoundException e) {
-//                    startActivity(new Intent(Intent.ACTION_VIEW,
-//                            Uri.parse("http://instagram.com/")));
-//                }
-//            }
-//        });
-//        findViewById(R.id.twitterImageView).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Uri uri = Uri.parse("http://twitter.com/");
-//                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
-//
-//                likeIng.setPackage("com.twitter.android");
-//
-//                try {
-//                    startActivity(likeIng);
-//                } catch (ActivityNotFoundException e) {
-//                    startActivity(new Intent(Intent.ACTION_VIEW,
-//                            Uri.parse("http://twitter.com/")));
-//                }
-//            }
-//        });
-//        findViewById(R.id.webImageView).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent i = new Intent(Intent.ACTION_VIEW);
-//                i.setData(Uri.parse("https://www.google.com/"));
-//                startActivity(i);
-//            }
-//        });
-
 
         fragmentLayout = findViewById(R.id.fragmentLayout);
         fragmentManager.beginTransaction().add(R.id.fragmentLayout, shopFragment, "5").hide(shopFragment).commit();

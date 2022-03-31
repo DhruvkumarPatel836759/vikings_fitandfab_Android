@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 import com.example.vikings_fitandfab_android.databinding.ActivityWorkoutBinding;
-public class WorkoutActivity extends AppCompatActivity {
 
+public class WorkoutActivity extends AppCompatActivity {
 
     ActivityWorkoutBinding binding;
 

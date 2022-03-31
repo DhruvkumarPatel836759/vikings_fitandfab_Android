@@ -1,7 +1,8 @@
 package com.example.vikings_fitandfab_android.Class;
 import android.content.res.Resources;
 
-public final class Utils {public static final double DOUBLE_EPSILON = 0 ;
+public final class Utils {
+    public static final double DOUBLE_EPSILON = 0 ;
 
     private Utils() {
     }

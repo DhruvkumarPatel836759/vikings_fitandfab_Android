@@ -4,7 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-public class AppPref {static final String HEIGHTINCH_CALCULATION = "HEIGHT_INCH_calculation";
+public class AppPref {
+    static final String HEIGHTINCH_CALCULATION = "HEIGHT_INCH_calculation";
     static final String HEIGHT_CALCULATION = "HEIGHT_calculation";
     static final String IS_DAILY = "IS_DAILY";
     static final String IS_FIRST_LUNCH = "IS_FIRST_LUNCH";
@@ -25,7 +26,7 @@ public class AppPref {static final String HEIGHTINCH_CALCULATION = "HEIGHT_INCH_
         SharedPreferences.Editor edit = context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).edit();
         edit.putBoolean(IS_RATEUS, z);
         edit.commit();
-}
+    }
     public static boolean isFirstLaunch(Context context) {
         return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getBoolean(IS_FIRST_LUNCH, false);
     }

@@ -1,9 +1,15 @@
 package com.example.vikings_fitandfab_android.Class;
 
 public class UserModel {
-    String name,email,age,height,weight,gender,allergie,gymPackage;
+    String name,email,age,height,weight,gender,allergie,gymPackage,uId;
 
     public UserModel() {
+    }
+    public String getuId() {
+        return uId;
+    }
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public String getName() {

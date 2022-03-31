@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -61,6 +63,10 @@ public class ShopFragment extends Fragment {
                 .register(R.layout.item_shop, new SlimInjector<SupplimentModel>() {
                     @Override
                     public void onInject(SupplimentModel data, IViewInjector injector) {
+
+                        Glide.with(getActivity()).load(data.getImage())
+                                .into((ImageView) injector
+                                        .findViewById(R.id.id1));
 
                         injector.text(R.id.id2, data.getName());
                         injector.text(R.id.id3, data.getDiscription());

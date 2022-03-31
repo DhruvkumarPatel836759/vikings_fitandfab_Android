@@ -1,10 +1,15 @@
 package com.example.vikings_fitandfab_android.Class;
 
-public class SupplimentModel {
+import java.io.Serializable;
+
+public class SupplimentModel implements Serializable {
 
     String discription,image,name,type,sId;
     int quantity;
     double price;
+
+    int remainQuantity;
+    int selectQunatity;
 
     public SupplimentModel() {
     }
@@ -12,6 +17,24 @@ public class SupplimentModel {
     public String getsId() {
         return sId;
     }
+
+
+    public int getSelectQunatity() {
+        return selectQunatity;
+    }
+
+    public void setSelectQunatity(int selectQunatity) {
+        this.selectQunatity = selectQunatity;
+    }
+
+    public int getRemainQuantity() {
+        return remainQuantity;
+    }
+
+    public void setRemainQuantity(int remainQuantity) {
+        this.remainQuantity = remainQuantity;
+    }
+
 
     public void setsId(String sId) {
         this.sId = sId;

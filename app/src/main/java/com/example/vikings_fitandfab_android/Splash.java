@@ -11,6 +11,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.example.vikings_fitandfab_android.Admin.AdminActivity;
 import com.example.vikings_fitandfab_android.Class.UserModel;
 
 public class Splash extends AppCompatActivity {

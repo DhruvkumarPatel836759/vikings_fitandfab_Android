@@ -9,6 +9,8 @@ public class OrderModel {
 
     double payment;
 
+    UserModel userModel;
+
     public double getPayment() {
         return payment;
     }
@@ -18,6 +20,14 @@ public class OrderModel {
     }
 
     public OrderModel() {
+    }
+
+    public UserModel getUserModel() {
+        return userModel;
+    }
+
+    public void setUserModel(UserModel userModel) {
+        this.userModel = userModel;
     }
 
     public String getStatus() {
