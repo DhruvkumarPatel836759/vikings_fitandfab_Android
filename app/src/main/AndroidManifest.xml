@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GYM">
         <activity
+            android:name=".DietPlanActivity"
+            android:exported="false" />
+        <activity
             android:name=".Admin.AddQuotesActivity"
             android:exported="false" />
         <activity
