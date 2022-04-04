@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.example.vikings_fitandfab_android.LoginActivity;
 import com.example.vikings_fitandfab_android.R;
+import com.example.vikings_fitandfab_android.UserTypeActivity;
 import com.example.vikings_fitandfab_android.databinding.ActivityAdminBinding;
 
 
@@ -30,7 +31,7 @@ public class AdminActivity  extends AppCompatActivity {
                 getSharedPreferences("Gym_ref", MODE_PRIVATE).edit()
                         .putString("admin", "")
                         .commit();
-                startActivity(new Intent(AdminActivity.this, LoginActivity.class));
+                startActivity(new Intent(AdminActivity.this, UserTypeActivity.class));
                 finish();
             }
         });
@@ -45,6 +46,12 @@ public class AdminActivity  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(AdminActivity.this, OrderAdminActivity.class));
+            }
+        });
+        binding.AddQuotesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AdminActivity.this, QuotesActivity.class));
             }
         });
     }
