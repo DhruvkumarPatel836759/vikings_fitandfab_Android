@@ -86,6 +86,8 @@ public class ProductActivity extends AppCompatActivity {
                                 startActivity(new Intent(ProductActivity.this,AddProductActivity.class)
                                         .putExtra("action","edit")
                                         .putExtra("product",data));
+
+
                             }
                         });
 

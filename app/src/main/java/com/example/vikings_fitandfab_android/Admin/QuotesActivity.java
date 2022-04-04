@@ -26,6 +26,7 @@ import net.idik.lib.slimadapter.SlimInjector;
 import net.idik.lib.slimadapter.viewinjector.IViewInjector;
 
 import java.util.ArrayList;
+
 public class QuotesActivity extends AppCompatActivity {
 
     ArrayList<QuotesClass> quotesClassArrayList = new ArrayList<>();

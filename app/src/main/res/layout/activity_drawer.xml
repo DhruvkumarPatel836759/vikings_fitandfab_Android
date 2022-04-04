@@ -97,7 +97,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profileView"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.05"
+                app:layout_constraintVertical_bias="0.06"
                 app:layout_constraintHorizontal_bias="0.05"
                 app:tint="@color/colorPrimary" />
 
@@ -123,6 +123,7 @@
                 app:layout_constraintTop_toTopOf="@+id/resourcesImageView"
                 app:layout_constraintBottom_toBottomOf="@+id/resourcesImageView"/>
 
+
             <ImageView
                 android:id="@+id/orderImageView"
                 android:layout_width="0dp"
@@ -136,8 +137,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintVertical_bias="0.06"
                 app:layout_constraintHorizontal_bias="0.05"
-                app:tint="@color/colorPrimary"
-                />
+                app:tint="@color/colorPrimary" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -161,7 +161,6 @@
                 app:layout_constraintTop_toTopOf="@+id/orderImageView"
                 app:layout_constraintBottom_toBottomOf="@+id/orderImageView"/>
 
-
             <View
                 android:id="@+id/cartView"
                 android:layout_width="0dp"
@@ -173,7 +172,91 @@
                 app:layout_constraintTop_toBottomOf="@+id/orderImageView"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintVertical_bias="0.06"/>
+            <ImageView
+                android:id="@+id/planImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.08"
+                app:layout_constraintHeight_percent="0.04"
+                android:src="@drawable/diet"
+                app:layout_constraintStart_toStartOf="@+id/back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cartView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.06"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:tint="@color/colorPrimary" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diet Plan"
+                android:textColor="@color/grayTextColor"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@+id/planImageView"
+                app:layout_constraintTop_toTopOf="@+id/planImageView"
+                app:layout_constraintBottom_toBottomOf="@+id/planImageView"
+                app:layout_constraintVertical_bias="0.5"
+                android:layout_marginLeft="@dimen/_16sdp"/>
+
+            <Button
+                android:id="@+id/planButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="@+id/planImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/planImageView"
+                app:layout_constraintBottom_toBottomOf="@+id/planImageView"/>
+
+<!--            <ImageView-->
+<!--                android:id="@+id/quotesImageView"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                app:layout_constraintWidth_percent="0.08"-->
+<!--                app:layout_constraintHeight_percent="0.04"-->
+<!--                android:src="@drawable/chat"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/back"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/planImageView"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintVertical_bias="0.06"-->
+<!--                app:layout_constraintHorizontal_bias="0.05"-->
+<!--                app:tint="@color/colorPrimary" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Fitness Quotes"-->
+<!--                android:textColor="@color/grayTextColor"-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/quotesImageView"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/quotesImageView"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/quotesImageView"-->
+<!--                app:layout_constraintVertical_bias="0.5"-->
+<!--                android:layout_marginLeft="@dimen/_16sdp"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/quotesButton"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/quotesImageView"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/quotesImageView"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/quotesImageView"/>-->
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                app:layout_constraintWidth_percent="0.9"
+                android:background="@color/lineGrayColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/planImageView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.06"/>
 
             <ImageView
                 android:id="@+id/logoutImageView"
@@ -184,11 +267,11 @@
                 android:src="@drawable/logout"
                 app:layout_constraintStart_toStartOf="@+id/back"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cartView"
+                app:layout_constraintTop_toBottomOf="@+id/line"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.05"
+                app:layout_constraintVertical_bias="0.06"
                 app:layout_constraintHorizontal_bias="0.05"
-                app:tint="@color/colorPrimary"/>
+                app:tint="@color/colorPrimary" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -212,34 +295,6 @@
                 app:layout_constraintTop_toTopOf="@+id/logoutImageView"
                 app:layout_constraintBottom_toBottomOf="@+id/logoutImageView"/>
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="@dimen/_30sdp"-->
-<!--                android:orientation="horizontal"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintVertical_bias="0.95"-->
-<!--                android:gravity="center">-->
-<!--                <ImageView-->
-<!--                    android:id="@+id/instagramImageView"-->
-<!--                    android:layout_width="@dimen/_30sdp"-->
-<!--                    android:layout_height="@dimen/_30sdp"-->
-<!--                    android:src="@drawable/instagram"/>-->
-<!--                <ImageView-->
-<!--                    android:id="@+id/twitterImageView"-->
-<!--                    android:layout_width="@dimen/_30sdp"-->
-<!--                    android:layout_height="@dimen/_30sdp"-->
-<!--                    android:src="@drawable/twitter"-->
-<!--                    android:layout_marginLeft="@dimen/_10sdp"/>-->
-<!--                <ImageView-->
-<!--                    android:id="@+id/webImageView"-->
-<!--                    android:layout_width="@dimen/_30sdp"-->
-<!--                    android:layout_height="@dimen/_30sdp"-->
-<!--                    android:src="@drawable/website"-->
-<!--                    android:layout_marginLeft="@dimen/_10sdp"/>-->
-<!--            </LinearLayout>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.navigation.NavigationView>

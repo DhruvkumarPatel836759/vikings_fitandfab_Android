@@ -12,15 +12,14 @@
         android:id="@+id/drawerImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/menu"
-        app:layout_constraintBottom_toBottomOf="@+id/headerImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.04"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/headerImageView"
-        app:layout_constraintVertical_bias="0.432"
         app:layout_constraintWidth_percent="0.05"
+        app:layout_constraintHeight_percent="0.04"
+        android:src="@drawable/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headerImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/headerImageView"
+        app:layout_constraintHorizontal_bias="0.05"
         app:tint="@color/colorPrimary" />
 
     <ImageView
@@ -70,15 +69,15 @@
 
     <ImageView
         android:id="@+id/home"
-        android:layout_width="14dp"
-        android:layout_height="16dp"
-        android:src="@drawable/home_sel"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
-        app:layout_constraintEnd_toStartOf="@+id/stopwatchImage"
-        app:layout_constraintHeight_percent="0.03"
-        app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
-        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintWidth_percent="0.05"
+        app:layout_constraintHeight_percent="0.03"
+        android:src="@drawable/home_sel"
+        app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
+        app:layout_constraintEnd_toStartOf="@+id/stopwatchImage"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
         app:tint="@color/colorPrimary" />
 
     <ImageView
@@ -208,14 +207,13 @@
         android:id="@+id/stopwatchButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.29"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"
-        app:layout_constraintEnd_toEndOf="@id/bottomBarBG"
-        app:layout_constraintHorizontal_bias="0.289"
         app:layout_constraintStart_toStartOf="@+id/bottomBarBG"
+        app:layout_constraintEnd_toEndOf="@id/bottomBarBG"
         app:layout_constraintTop_toTopOf="@+id/bottomBarBG"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.15" />
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBarBG"/>
 
     <Button
         android:id="@+id/bMIButton"

@@ -15,6 +15,7 @@ import com.example.vikings_fitandfab_android.R;
 import com.yashovardhan99.timeit.Stopwatch;
 
 
+
 public class StopwatchFragment extends Fragment {
 
 
@@ -42,15 +43,15 @@ public class StopwatchFragment extends Fragment {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!start){
-                    startButton.setText("Stop");
-                    stopwatch.start();
-                    start=true;
-                }else{
-                    startButton.setText("Start");
-                    stopwatch.stop();
-                    start=false;
-                }
+             if (!start){
+                 startButton.setText("Stop");
+                 stopwatch.start();
+                 start=true;
+             }else{
+                 startButton.setText("Start");
+                 stopwatch.stop();
+                 start=false;
+             }
 
 
             }

@@ -57,6 +57,12 @@
             android:text="3*4"/>
 
 
+
+
+
+
+
     </RelativeLayout>
+
 
 </com.zyp.cardview.YcCardView>

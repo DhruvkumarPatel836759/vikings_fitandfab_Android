@@ -64,6 +64,7 @@ public class ShopFragment extends Fragment {
                     @Override
                     public void onInject(SupplimentModel data, IViewInjector injector) {
 
+
                         Glide.with(getActivity()).load(data.getImage())
                                 .into((ImageView) injector
                                         .findViewById(R.id.id1));
@@ -76,30 +77,35 @@ public class ShopFragment extends Fragment {
                         injector.clicked(R.id.id6, new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                String cartId = FirebaseAuth.getInstance().getCurrentUser().getUid() + ";;" + data.getsId();
-                                FirebaseFirestore.getInstance().collection("cart").document(cartId).get()
-                                        .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                                            @Override
-                                            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                                                if (documentSnapshot.exists()) {
-                                                    Toast.makeText(getContext(), "Product already in cart", Toast.LENGTH_SHORT).show();
-                                                } else {
-                                                    HashMap<String, Object> hashMap = new HashMap<>();
-                                                    hashMap.put("productId", data.getsId());
-                                                    hashMap.put("userId", FirebaseAuth.getInstance().getCurrentUser().getUid());
-                                                    FirebaseFirestore.getInstance().collection("cart").document(cartId)
-                                                            .set(hashMap)
-                                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                                @Override
-                                                                public void onSuccess(Void unused) {
-                                                                    Toast.makeText(getContext(), "Product add in cart successfully", Toast.LENGTH_SHORT).show();
+                                if (data.getQuantity() != 0) {
+                                    String cartId = FirebaseAuth.getInstance().getCurrentUser().getUid() + ";;" + data.getsId();
+                                    FirebaseFirestore.getInstance().collection("cart").document(cartId).get()
+                                            .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                                @Override
+                                                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                                    if (documentSnapshot.exists()) {
+                                                        Toast.makeText(getContext(), "Product already in cart", Toast.LENGTH_SHORT).show();
+                                                    } else {
+                                                        HashMap<String, Object> hashMap = new HashMap<>();
+                                                        hashMap.put("productId", data.getsId());
+                                                        hashMap.put("userId", FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                                        FirebaseFirestore.getInstance().collection("cart").document(cartId)
+                                                                .set(hashMap)
+                                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                    @Override
+                                                                    public void onSuccess(Void unused) {
+                                                                        Toast.makeText(getContext(), "Product add in cart successfully", Toast.LENGTH_SHORT).show();
 
-                                                                }
-                                                            });
+                                                                    }
+                                                                });
 
+                                                    }
                                                 }
-                                            }
-                                        });
+                                            });
+                                }
+                                else {
+                                    Toast.makeText(getActivity(), "Product out of stock", Toast.LENGTH_SHORT).show();
+                                }
 
 
                             }

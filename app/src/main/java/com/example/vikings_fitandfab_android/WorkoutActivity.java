@@ -14,6 +14,7 @@ import com.example.vikings_fitandfab_android.databinding.ActivityWorkoutBinding;
 
 public class WorkoutActivity extends AppCompatActivity {
 
+
     ActivityWorkoutBinding binding;
 
     private MaterialButton btnNext;
@@ -126,7 +127,7 @@ public class WorkoutActivity extends AppCompatActivity {
             binding.tricepesFlipper.setVisibility(View.GONE);
             binding.bicepsFlipper.setVisibility(View.GONE);
             binding.glutesFlipper.setVisibility(View.GONE);
-            binding.exNumber.setText("WORKOUT :  1 / 19");
+            binding.exNumber.setText("WORKOUT :  1 / 17");
             binding.text.setText("SHOULDERS");
 
             btnNext.setOnClickListener(new View.OnClickListener() {
@@ -266,7 +267,7 @@ public class WorkoutActivity extends AppCompatActivity {
             binding.glutesFlipper.setVisibility(View.VISIBLE);
             binding.text.setText("GLUTES");
 
-            binding.exNumber.setText("WORKOUT :  1 / 5");
+            binding.exNumber.setText("WORKOUT :  1 / 15");
 
             btnNext.setOnClickListener(new View.OnClickListener() {
                 @SuppressLint({"SetTextI18n", "UseCompatLoadingForDrawables"})

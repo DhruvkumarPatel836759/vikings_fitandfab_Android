@@ -26,7 +26,6 @@
     <color name="shadowColor">#20114084</color>
     <color name="chipcolor">#1A114084</color>
 
-
     <color name="orange">#FC6853</color>
     <color name="ProgressColor">#04befe</color>
     <color name="charttextcolor">#a9a9a9</color>
@@ -37,4 +36,6 @@
     <color name="color_range_yellow">#fbc531</color>
     <color name="toolbarcolor">#de6cff</color>
     <color name="dark_ligh_color">#535E6A</color>
+
+
 </resources>

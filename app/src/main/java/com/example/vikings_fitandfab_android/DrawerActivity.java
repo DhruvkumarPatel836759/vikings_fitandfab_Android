@@ -12,10 +12,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.vikings_fitandfab_android.Fragments.WorkoutFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.example.vikings_fitandfab_android.Fragments.BMIFragment;
 import com.example.vikings_fitandfab_android.Fragments.HomeFragment;
+import com.example.vikings_fitandfab_android.Fragments.WorkoutFragment;
 import com.example.vikings_fitandfab_android.Fragments.ShopFragment;
 import com.example.vikings_fitandfab_android.Fragments.StopwatchFragment;
 import com.example.vikings_fitandfab_android.databinding.ActivityDrawerBinding;
@@ -32,10 +32,12 @@ public class DrawerActivity extends AppCompatActivity {
     FragmentManager fragmentManager = getSupportFragmentManager();
     private ActivityDrawerBinding binding;
 
+
     ImageView home, stopwatchImage, bMIImage, planingImage, shopImage;
     ImageView homeLine, stopwatchLine, bMILine, planingLine, shopLine;
     ImageView profileImageView, profileImageViewdrawer;
     TextView nameTextView, emailTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +45,16 @@ public class DrawerActivity extends AppCompatActivity {
         binding = ActivityDrawerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         profileImageView = findViewById(R.id.profileImageView);
         profileImageViewdrawer = findViewById(R.id.profileImageViewdrawer);
         nameTextView = findViewById(R.id.nameTextView);
         emailTextView = findViewById(R.id.emailTextView);
 
+
         nameTextView.setText(LoginActivity.userModel.getName());
         emailTextView.setText(LoginActivity.userModel.getEmail());
+
 
         profileImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,15 +87,24 @@ public class DrawerActivity extends AppCompatActivity {
                 startActivity(new Intent(DrawerActivity.this, OrderActivity.class));
             }
         });
+        findViewById(R.id.planButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.close();
+                startActivity(new Intent(DrawerActivity.this, WeekActivity.class));
+            }
+        });
 
         findViewById(R.id.logoutButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(DrawerActivity.this, LoginActivity.class));
+                startActivity(new Intent(DrawerActivity.this, UserTypeActivity.class));
                 finish();
             }
         });
+
+
 
         fragmentLayout = findViewById(R.id.fragmentLayout);
         fragmentManager.beginTransaction().add(R.id.fragmentLayout, shopFragment, "5").hide(shopFragment).commit();

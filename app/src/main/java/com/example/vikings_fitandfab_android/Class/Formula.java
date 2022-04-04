@@ -1,12 +1,16 @@
 package com.example.vikings_fitandfab_android.Class;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 public class Formula {
+
+
+
     public static double bmicalculatorkg(double d, double d2) {
-    return d / (d2 * d2);
-}
+        return d / (d2 * d2);
+    }
 
     public static double bmicalculatorlb(double d, double d2) {
         return (d / (d2 * d2)) * 703.0d;

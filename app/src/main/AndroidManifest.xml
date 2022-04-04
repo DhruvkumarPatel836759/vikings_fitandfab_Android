@@ -13,16 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GYM">
         <activity
-            android:name=".DietPlanActivity"
-            android:exported="false" />
-        <activity
             android:name=".Admin.AddQuotesActivity"
             android:exported="false" />
         <activity
             android:name=".Admin.QuotesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Admin.ProductActivity"
             android:exported="false" />
         <activity
             android:name=".Admin.OrderAdminActivity"
@@ -31,7 +25,22 @@
             android:name=".Admin.AddProductActivity"
             android:exported="false" />
         <activity
+            android:name=".WeekActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DietPlanActivity"
+            android:exported="false" />
+        <activity
             android:name=".WorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderConformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderActivity"
             android:exported="false" />
         <activity
             android:name=".CartActivity"

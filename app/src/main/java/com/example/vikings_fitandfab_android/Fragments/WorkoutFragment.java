@@ -1,9 +1,7 @@
 package com.example.vikings_fitandfab_android.Fragments;
 
-import android.os.Bundle;
-
 import android.content.Intent;
-
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,11 +14,8 @@ import android.view.ViewGroup;
 import com.example.vikings_fitandfab_android.R;
 import com.example.vikings_fitandfab_android.WorkoutActivity;
 
-
 import com.example.vikings_fitandfab_android.databinding.FragmentShopBinding;
 import com.example.vikings_fitandfab_android.databinding.FragmentWorkoutBinding;
-
-import com.example.vikings_fitandfab_android.R;
 
 
 public class WorkoutFragment extends Fragment {
@@ -44,63 +39,63 @@ public class WorkoutFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","chest"));
+                .putExtra("ex","chest"));
             }
         });
         binding.backCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","back"));
+                .putExtra("ex","back"));
             }
         });
         binding.shouldersCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","shoulder"));
+                .putExtra("ex","shoulder"));
             }
         });
         binding.fullCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","full"));
+                .putExtra("ex","full"));
             }
         });
         binding.tricepsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","triceps"));
+                .putExtra("ex","triceps"));
             }
         });
         binding.bicepsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","biceps"));
+                .putExtra("ex","biceps"));
             }
         });
         binding.glutesCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","glutes"));
+                .putExtra("ex","glutes"));
             }
         });
         binding.legsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","legs"));
+                .putExtra("ex","legs"));
             }
         });
         binding.absCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), WorkoutActivity.class)
-                        .putExtra("ex","abs"));
+                .putExtra("ex","abs"));
             }
         });
     }

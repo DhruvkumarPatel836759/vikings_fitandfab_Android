@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class OrderModel {
+
     String orderId,userId,status;
     ArrayList<HashMap<String, Object>> products = new ArrayList<>();
 

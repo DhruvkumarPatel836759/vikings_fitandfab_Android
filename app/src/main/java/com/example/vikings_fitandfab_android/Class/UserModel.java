@@ -5,9 +5,11 @@ public class UserModel {
 
     public UserModel() {
     }
+
     public String getuId() {
         return uId;
     }
+
     public void setuId(String uId) {
         this.uId = uId;
     }

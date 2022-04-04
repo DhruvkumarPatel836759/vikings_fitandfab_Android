@@ -2,8 +2,8 @@ package com.example.vikings_fitandfab_android.Class;
 
 public class CartModel {
 
-    String productId,cId;
-    boolean selection =true;
+   String productId,cId;
+   boolean selection =true;
 
     public CartModel() {
     }

@@ -30,8 +30,9 @@ import com.example.vikings_fitandfab_android.R;
 
 import java.util.Objects;
 
+
 public class BMIFragment extends Fragment implements View.OnClickListener, TextWatcher {
-    //
+//
     Button btnkgbmi;
     Button btnlbbmi;
     EditText heightEditText;
@@ -39,7 +40,7 @@ public class BMIFragment extends Fragment implements View.OnClickListener, TextW
     EditText heightinchedittext;
     TextView heightinchtextbmi;
     String kglbval;
-    //    ImageView popupBMIButton, btnBack;
+//    ImageView popupBMIButton, btnBack;
     TextView resulthealthyweighttextView;
     TextView resultidealweighttextView;
     TextView resultoverweighttextView;
@@ -235,8 +236,7 @@ public class BMIFragment extends Fragment implements View.OnClickListener, TextW
             this.txtbmivalue.setText("Morbidly Obese");
             this.txtbmivalue.setTextColor(getActivity().getResources().getColor(R.color.color_range_blue));
         } else {
-            this.txtbmivalue.setTextColor(getActivity().getResources().getColor(R.color.color_range_pink));
-            this.txtbmivalue.setText("Under weight");
+            this.txtbmivalue.setText("");
         }
         this.seekBar.setProgress(i);
         this.txtbmical.setText(Formula.format(d));

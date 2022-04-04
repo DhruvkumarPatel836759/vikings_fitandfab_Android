@@ -11,13 +11,13 @@ public class SupplimentModel implements Serializable {
     int remainQuantity;
     int selectQunatity;
 
+
     public SupplimentModel() {
     }
 
     public String getsId() {
         return sId;
     }
-
 
     public int getSelectQunatity() {
         return selectQunatity;
@@ -34,7 +34,6 @@ public class SupplimentModel implements Serializable {
     public void setRemainQuantity(int remainQuantity) {
         this.remainQuantity = remainQuantity;
     }
-
 
     public void setsId(String sId) {
         this.sId = sId;
@@ -87,5 +86,4 @@ public class SupplimentModel implements Serializable {
     public void setPrice(double price) {
         this.price = price;
     }
-
 }

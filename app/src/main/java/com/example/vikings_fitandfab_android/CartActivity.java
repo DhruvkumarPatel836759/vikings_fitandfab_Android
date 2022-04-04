@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -54,7 +53,7 @@ public class CartActivity extends AppCompatActivity {
 
     ActivityStopWatchBinding binding;
 
-    SlimAdapter slimAdapter,paymentAdapter;
+    SlimAdapter slimAdapter, paymentAdapter;
     private ProgressDialog progressDialog;
 
     double totalAmount;
@@ -137,7 +136,6 @@ public class CartActivity extends AppCompatActivity {
                                 }
                                 data.getSupplimentModel().setSelectQunatity(Integer.parseInt(quantityText.getText().toString()));
                                 data.getSupplimentModel().setRemainQuantity(data.getSupplimentModel().getQuantity() - Integer.parseInt(quantityText.getText().toString()));
-                                Log.e("getRemainQuantity", "minus: " + data.getSupplimentModel().getRemainQuantity());
                             }
                         });
                         injector.clicked(R.id.plusImage, new View.OnClickListener() {
@@ -152,11 +150,15 @@ public class CartActivity extends AppCompatActivity {
                             }
                         });
 
+                        data.getSupplimentModel().setSelectQunatity(Integer.parseInt(quantityText.getText().toString()));
+                        data.getSupplimentModel().setRemainQuantity(data.getSupplimentModel().getQuantity() - Integer.parseInt(quantityText.getText().toString()));
+
 
                     }
                 })
                 .attachTo(binding.recyclerView);
         slimAdapter.updateData(cartModelArrayList);
+
 
         LinearLayoutManager pLayoutManager = new LinearLayoutManager(this);
         binding.recyclerViewItem.setLayoutManager(pLayoutManager);
@@ -187,9 +189,6 @@ public class CartActivity extends AppCompatActivity {
                                     * cartModelArrayList.get(i).getSupplimentModel().getSelectQunatity());
 
                             paymentArraylist.add(cartModelArrayList.get(i));
-//                        FirebaseFirestore.getInstance().collection("suppliments")
-//                                .document(cartModelArrayList.get(i).getProductId())
-//                                .update("quantity", cartModelArrayList.get(i).getSupplimentModel().getRemainQuantity());
                         }
 
                         Log.e("totalAmount", "" + totalAmount);
@@ -228,7 +227,7 @@ public class CartActivity extends AppCompatActivity {
 
     void getCart() {
         progressDialog.show();
-        FirebaseFirestore.getInstance()
+        cartListener = FirebaseFirestore.getInstance()
                 .collection("cart")
                 .whereEqualTo("userId", FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {

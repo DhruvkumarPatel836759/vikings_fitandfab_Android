@@ -1,6 +1,5 @@
 package com.example.vikings_fitandfab_android.Admin;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,8 +11,7 @@ import com.example.vikings_fitandfab_android.R;
 import com.example.vikings_fitandfab_android.UserTypeActivity;
 import com.example.vikings_fitandfab_android.databinding.ActivityAdminBinding;
 
-
-public class AdminActivity  extends AppCompatActivity {
+public class AdminActivity extends AppCompatActivity {
 
 
     ActivityAdminBinding binding;

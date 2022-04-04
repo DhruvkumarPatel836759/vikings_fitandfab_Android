@@ -30,8 +30,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
-
-public class AddQuotesActivity  extends AppCompatActivity {
+public class AddQuotesActivity extends AppCompatActivity {
 
     StorageReference mstorageref;
     private Uri imageUri;

@@ -107,19 +107,44 @@
         <entry key="app/src/main/res/drawable/ic_next.xml" value="0.1295" />
         <entry key="app/src/main/res/drawable/ic_workout.xml" value="0.1295" />
         <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.1295" />
+        <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/activity_add_quotes.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/activity_admin.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/activity_diet_plan.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/activity_gym_package.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/layout/activity_order.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/activity_order_admin.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/activity_order_conformation.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/activity_product.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/activity_quotes.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.11822916666666666" />
+        <entry key="app/src/main/res/layout/activity_stop_watch.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/activity_user_type.xml" value="0.11822916666666666" />
+        <entry key="app/src/main/res/layout/activity_week.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/activity_workout.xml" value="0.11875" />
+        <entry key="app/src/main/res/layout/app_bar_drawer.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/conform_item.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/content_drawer.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/fragment_b_m_i.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/fragment_shop.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/fragment_stopwatch.xml" value="0.11614583333333334" />
         <entry key="app/src/main/res/layout/fragment_workout.xml" value="0.1046875" />
+        <entry key="app/src/main/res/layout/item_cart.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/item_order.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/item_order_admin.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/item_quotes.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/item_shop.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/layout/item_shop_admin.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/menu/bottom_bar.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.144" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.144" />
       </map>
     </option>
   </component>

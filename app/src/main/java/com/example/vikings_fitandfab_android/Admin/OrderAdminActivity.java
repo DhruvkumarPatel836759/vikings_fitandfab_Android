@@ -11,6 +11,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.vikings_fitandfab_android.Class.OrderModel;
+import com.example.vikings_fitandfab_android.Class.UserModel;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -18,8 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.example.vikings_fitandfab_android.Class.OrderModel;
-import com.example.vikings_fitandfab_android.Class.UserModel;
+
 import com.example.vikings_fitandfab_android.R;
 import com.example.vikings_fitandfab_android.databinding.ActivityOrderAdminBinding;
 
@@ -92,44 +93,44 @@ public class OrderAdminActivity extends AppCompatActivity {
 
                         if (data.getUserModel()!=null)
                             injector.text(R.id.userId, data.getUserId());
-                        injector.text(R.id.username, data.getUserModel().getName());
+                            injector.text(R.id.username, data.getUserModel().getName());
 
 
-                        injector.clicked(R.id.statusText, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                if (data.getStatus().equals("pending")){
-                                    AlertDialog alertDialog = new AlertDialog.Builder(OrderAdminActivity.this).create();
-                                    alertDialog.setTitle("Deliver");
-                                    alertDialog.setMessage("Are you sure to Deliver the  Order?");
-                                    alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
-                                            new DialogInterface.OnClickListener() {
-                                                public void onClick(DialogInterface dialog, int which) {
+                            injector.clicked(R.id.statusText, new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    if (data.getStatus().equals("pending")){
+                                        AlertDialog alertDialog = new AlertDialog.Builder(OrderAdminActivity.this).create();
+                                        alertDialog.setTitle("Deliver");
+                                        alertDialog.setMessage("Are you sure to Deliver the  Order?");
+                                        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+                                                new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int which) {
 
-                                                    FirebaseFirestore.getInstance()
-                                                            .collection("order")
-                                                            .document(data.getOrderId())
-                                                            .update("status", "delivered")
-                                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                                @Override
-                                                                public void onSuccess(Void unused) {
-                                                                    dialog.dismiss();
-                                                                }
-                                                            });
-                                                }
-                                            });
-                                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
-                                            new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialogInterface, int i) {
-                                                    alertDialog.dismiss();
-                                                }
-                                            });
-                                    alertDialog.show();
+                                                        FirebaseFirestore.getInstance()
+                                                                .collection("order")
+                                                                .document(data.getOrderId())
+                                                                .update("status", "delivered")
+                                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                    @Override
+                                                                    public void onSuccess(Void unused) {
+                                                                        dialog.dismiss();
+                                                                    }
+                                                                });
+                                                    }
+                                                });
+                                        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                                                new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                                        alertDialog.dismiss();
+                                                    }
+                                                });
+                                        alertDialog.show();
+                                    }
+
                                 }
-
-                            }
-                        });
+                            });
                     }
                 })
                 .attachTo(binding.recyclerView);

@@ -1,4 +1,5 @@
 package com.example.vikings_fitandfab_android.Class;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -18,51 +19,13 @@ public class AppPref {
     static final String REMINDER_TIME = "reminderTime";
     static final String WEIGHT_CALCULATION = "WEIGHT_calculation";
 
-    public static boolean rateus(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getBoolean(IS_RATEUS, false);
-    }
-
-    public static void setRateUs(Context context, boolean z) {
-        SharedPreferences.Editor edit = context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).edit();
-        edit.putBoolean(IS_RATEUS, z);
-        edit.commit();
-    }
-    public static boolean isFirstLaunch(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getBoolean(IS_FIRST_LUNCH, false);
-    }
 
 
-
-
-    public static boolean isDAILY(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getBoolean(IS_DAILY, true);
-    }
-
-
-
-    public static void setReminderTime(Context context, long j) {
-        SharedPreferences.Editor edit = context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).edit();
-        edit.putLong(REMINDER_TIME, j);
-        edit.commit();
-    }
-
-    public static long getReminderTime(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getLong(REMINDER_TIME, 1548207000000L);
-    }
-
-
-    public static float getWeightcalculation(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getFloat(WEIGHT_CALCULATION, 70.0f);
-    }
 
     public static void setWeightcalculation(Context context, float f) {
         SharedPreferences.Editor edit = context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).edit();
         edit.putFloat(WEIGHT_CALCULATION, f);
         edit.commit();
-    }
-
-    public static int getHeightinchcalculation(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getInt(HEIGHTINCH_CALCULATION, 5);
     }
 
     public static void setHeightinchcalculation(Context context, int i) {
@@ -89,37 +52,6 @@ public class AppPref {
     public static void setKglbcalculation(Context context, boolean z) {
         SharedPreferences.Editor edit = context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).edit();
         edit.putBoolean(ISKG_CALCULATION, z);
-        edit.commit();
-    }
-
-    public static boolean isSave(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getBoolean(IS_SAVE, false);
-    }
-
-    @SuppressLint({"ApplySharedPref"})
-    public static void setSave(Context context, boolean z) {
-        SharedPreferences.Editor edit = context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).edit();
-        edit.putBoolean(IS_SAVE, z);
-        edit.commit();
-    }
-
-    public static boolean isMatrixWeight(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getBoolean(IS_METRIC_WEIGHT, true);
-    }
-
-    public static void setMatrixWeight(Context context, boolean z) {
-        SharedPreferences.Editor edit = context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).edit();
-        edit.putBoolean(IS_METRIC_WEIGHT, z);
-        edit.commit();
-    }
-
-    public static boolean isMatrixWaist(Context context) {
-        return context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).getBoolean(IS_METRIC_WAIST, true);
-    }
-
-    public static void setMatrixWaist(Context context, boolean z) {
-        SharedPreferences.Editor edit = context.getApplicationContext().getSharedPreferences(MY_PREFRENCE, 0).edit();
-        edit.putBoolean(IS_METRIC_WAIST, z);
         edit.commit();
     }
 
